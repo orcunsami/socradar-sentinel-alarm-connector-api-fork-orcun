@@ -165,7 +165,7 @@
                 },
                 "method": "put",
                 "body": {
-                  "title": "@{if(empty(items('For_each')?['alarm_type_details']?['alarm_generic_title']), 'SOCRadar Alert', items('For_each')?['alarm_type_details']?['alarm_generic_title'])} - ID: @{items('For_each')?['alarm_id']}",
+                  "title": "SOCRadar-AlarmID-@{items('For_each')?['alarm_id']}",
                   "severity": "@{if(empty(items('For_each')?['alarm_risk_level']), 'Medium', items('For_each')?['alarm_risk_level'])}",
                   "status": "New",
                   "description": "@{if(empty(items('For_each')?['alarm_text']), 'No description available', items('For_each')?['alarm_text'])}"
